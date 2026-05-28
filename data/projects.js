@@ -374,7 +374,7 @@ export const projects = [
     category: "Engineering",
     featured: false,
     priority: 7,
-    coverImage: "assets/projects/duomark-stylus/duomark-stylus_1.png",
+    coverImage: "assets/projects/duomark-stylus/duomark-stylus_2.png",
     tags: ["Product Design", "Assistive Tech", "Client Work"],
     summary: "Designed an assistive stylus-marker hybrid for an occupational therapist’s clients, enabling seamless transitions between digital and paper writing.",
     impact: "Delivered a functional prototype that reduced task-switching time for clients with limited hand mobility.",
@@ -422,7 +422,7 @@ export const projects = [
     category: "Engineering",
     featured: false,
     priority: 8,
-    coverImage: "assets/projects/dice-in-cup/dice-in-cup_1.png",
+    coverImage: "assets/projects/dice-in-cup/dice-in-cup_3.png",
     tags: ["Simulation", "Python", "Dynamics"],
     summary: "Simulated a dice bouncing inside a moving cup using symbolic math, Euler-Lagrange mechanics, and impact modeling in Python.",
     impact: "Built a full rigid-body simulation with real-time collision detection and momentum-consistent impact handling.",
@@ -451,8 +451,10 @@ export const projects = [
       },
       {
         heading: "Simulation Video",
-        body: "[PLACEHOLDER — video to be embedded — Drew will provide]",
-        images: []
+        body: "Animated output of the simulation — the dice bouncing inside the moving cup, with momentum-consistent impacts at the walls.",
+        images: [
+          "assets/projects/dice-in-cup/dice-in-cup_4.mp4"
+        ]
       }
     ],
     links: [
@@ -467,7 +469,7 @@ export const projects = [
     category: "Engineering",
     featured: false,
     priority: 9,
-    coverImage: "assets/projects/leglatch/leglatch_4.png",
+    coverImage: "assets/projects/leglatch/leglatch_5.png",
     tags: ["Design Thinking", "Client Work", "Non-Profit"],
     summary: "Designed wearable pants with attachable legs to prevent toddlers from climbing out of high chairs — a partnership with non-profit Kids In Danger (KID).",
     impact: "Led a 4-person team end-to-end as project manager through concept, prototyping, and client review.",
@@ -493,8 +495,10 @@ export const projects = [
       },
       {
         heading: "Final Product",
-        body: "At the root, what we really needed to be able to stop was the children from climbing out of the chair. The LegLatch design is a pair of pants with attachable legs that is comfortable and allows for movement while simultaneously preventing the child from standing up in their chair, or ultimately exiting the chair and falling onto the ground.\n\n[PLACEHOLDER — final product image]",
-        images: []
+        body: "At the root, what we really needed to be able to stop was the children from climbing out of the chair. The LegLatch design is a pair of pants with attachable legs that is comfortable and allows for movement while simultaneously preventing the child from standing up in their chair, or ultimately exiting the chair and falling onto the ground.",
+        images: [
+          "assets/projects/leglatch/leglatch_5.png"
+        ]
       }
     ],
     links: []

@@ -196,16 +196,16 @@ function renderProjectDetail() {
   ]);
   root.appendChild(cover);
 
-  // Metadata strip
-  const meta = el('div', { class: 'container' }, [
-    el('div', { class: 'project-meta reveal' }, [
-      metaCell('Timeline', p.timeline),
-      metaCell('Role', p.role),
-      metaCell('Tools', (p.tools || []).join(' · ')),
-      metaCell('Tags', (p.tags || []).join(' · '))
-    ])
-  ]);
-  root.appendChild(meta);
+  // Metadata strip — Tools only, engineering only
+  if (p.category === 'Engineering' && Array.isArray(p.tools) && p.tools.length) {
+    const meta = el('div', { class: 'container' }, [
+      el('div', { class: 'project-meta reveal' }, [
+        el('span', { class: 'project-meta__label' }, 'Tools'),
+        ...p.tools.map((t) => el('span', { class: 'project-meta__chip' }, t))
+      ])
+    ]);
+    root.appendChild(meta);
+  }
 
   // Links
   if (Array.isArray(p.links) && p.links.length > 0) {

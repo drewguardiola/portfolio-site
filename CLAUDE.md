@@ -2,6 +2,14 @@
 
 Personal portfolio for Drew Guardiola (Northwestern McCormick, MechE B.S./M.S. '27). Targeting mechanical / aerospace internships starting Summer 2026.
 
+## V2.6 changes (May 2026)
+
+- Nav tab "Work" → "Projects" (display only; `work.html` filename preserved). Home heading "Featured Work" → "Featured Projects".
+- Project metadata strip simplified: only Tools rendered, as monospace chips. Hidden entirely on Non-Engineering projects (Tools field doesn't apply to hobbies).
+- Project subtitle (`.project-hero__summary`): slightly smaller (`--text-lg`), spans full content width (removed `max-width`).
+- Hero airfoil clipping fixed: removed static +80px SVG translate and the redundant constant translates baked into `hf-rotate`/`hf-rotate-rear` keyframes so the rotation orbits the SVG center. `.hero__canvas` switched to `overflow: hidden` as a safety net.
+- DuoMark cover/lead → image 2. Dice in a Cup cover/lead → image 3, "Simulation Video" section PLACEHOLDER replaced with embedded `dice-in-cup_4.mp4`. LegLatch cover/lead → image 5, "Final Product" section PLACEHOLDER resolved with the same image.
+
 ## V2.5 changes (May 2026)
 
 - Home page now uses the same 3-column tile grid as the work page (shared `renderEngineeringGrid` function)

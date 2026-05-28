@@ -56,7 +56,7 @@
       </linearGradient>
     </defs>
     <rect x="-400" y="-300" width="800" height="600" fill="url(#hf-grid)"/>
-    <g class="hf-stack" transform="translate(80 0)">
+    <g class="hf-stack">
       <g class="hf-wing hf-wing--rear" transform="translate(-12 18)">
         <path d="${rearPath}" fill="none" stroke="#4A8AE8" stroke-width="3"  stroke-opacity="0.22" stroke-linejoin="round" stroke-linecap="round"/>
         <path d="${rearPath}" fill="none" stroke="#92B8F0" stroke-width="1.2" stroke-opacity="0.6"  stroke-linejoin="round" stroke-linecap="round"/>
