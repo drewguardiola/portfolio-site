@@ -25,27 +25,6 @@
   targets.forEach((el) => io.observe(el));
 })();
 
-// Hero parallax — airfoil moves at 0.5x scroll rate.
-(function () {
-  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce) return;
-  const hero = document.querySelector('.hero');
-  const airfoil = document.getElementById('hero-airfoil');
-  if (!hero || !airfoil) return;
-  const heroBottom = hero.offsetTop + hero.offsetHeight;
-  let ticking = false;
-  window.addEventListener('scroll', function () {
-    if (ticking) return;
-    ticking = true;
-    requestAnimationFrame(function () {
-      if (window.scrollY < heroBottom) {
-        airfoil.style.transform = 'translateY(' + (window.scrollY * 0.5) + 'px)';
-      }
-      ticking = false;
-    });
-  }, { passive: true });
-})();
-
 // Background pattern parallax — moves at 0.4x scroll rate.
 (function () {
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

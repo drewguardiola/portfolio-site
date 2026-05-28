@@ -20,7 +20,7 @@ Manual reference for visual decisions on this site. Consult before any front-end
 - Accent: `#4A8AE8` (aerospace blue)
 - Accent hover: `#6BA0F0`
 
-One accent color. Use sparingly — links, focus rings, hover lifts, monospace technical metadata highlights, the airfoil strokes, the "Available for Summer 2026" pill. Never as a fill on large surfaces.
+One accent color. Use sparingly — links, focus rings, hover lifts, monospace technical metadata highlights, the "Available for Summer 2026" pill. Never as a fill on large surfaces.
 
 ## Typography
 
@@ -37,12 +37,11 @@ Monospace: for technical metadata only — coordinates, project IDs, tool tags, 
 
 - Smooth scroll site-wide
 - Section enter: fade + 16px rise on IntersectionObserver
-- Hero airfoil: slow Y-rotation (one revolution / ~25s) + subtle pitch oscillation
 - Card hover: lift 4px + slight border-accent shift
 - Easing: `cubic-bezier(0.16, 1, 0.3, 1)` (gentle exponential out)
 - Durations: 200ms (micro), 400ms (transitions), 600ms (enters)
 
-`prefers-reduced-motion: reduce` disables airfoil rotation, fade-and-rise, and parallax. Hover lifts may stay (sub-100ms transforms).
+`prefers-reduced-motion: reduce` disables fade-and-rise and parallax. Hover lifts may stay (sub-100ms transforms).
 
 ## Hard "no" list
 

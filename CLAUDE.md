@@ -2,6 +2,11 @@
 
 Personal portfolio for Drew Guardiola (Northwestern McCormick, MechE B.S./M.S. '27). Targeting mechanical / aerospace internships starting Summer 2026.
 
+## V2.7 changes (May 2026)
+
+- Hero airfoil removed entirely: `js/hero-airfoil.js` deleted, hero SVG element removed from `index.html`, all `.hero__canvas` / `.hf-*` rules and `hf-rotate`/`hf-rotate-rear`/`hf-pitch` keyframes stripped from `css/pages.css`, airfoil parallax block stripped from `js/motion.js`.
+- Home-page dot grid removed (it was inside the airfoil SVG, goes away with it). Topo "rings" background on `body` retained site-wide.
+
 ## V2.6 changes (May 2026)
 
 - Nav tab "Work" → "Projects" (display only; `work.html` filename preserved). Home heading "Featured Work" → "Featured Projects".
@@ -94,7 +99,7 @@ Plain HTML + CSS + vanilla JS. No build step. No npm. Run locally with `python -
 /about.html        bio, education, hobby strip
 /contact.html      standalone contact page
 /css/              tokens.css, base.css, components.css, pages.css
-/js/               data-renderer.js, hero-airfoil.js, motion.js, nav.js
+/js/               data-renderer.js, motion.js, nav.js
 /data/             projects.js, resume.js
 /assets/brand/     headshot, resume PDF, favicon, icons/*.svg
 /assets/projects/<slug>/  per-project images
@@ -140,6 +145,5 @@ Set `upcoming: true` on a project entry. Cards render dimmed with a "Coming Soon
 ## Anti-patterns — refuse and ask first
 
 - Adding a JS framework, build step, or package manager
-- Replacing the airfoil hero with stock animation libraries (GSAP, Framer Motion, three.js demos)
 - Pushing to GitHub
 - Adding tracking pixels, analytics, or third-party fonts that aren't in this repo

@@ -14,7 +14,7 @@ Authoritative list of CSS custom properties on `:root` in `css/tokens.css`. Edit
 | `--color-text-dim` | `#5E5E66` | Tertiary text, deemphasized |
 | `--color-border` | `rgba(255, 255, 255, 0.08)` | Dividers, card borders |
 | `--color-border-strong` | `rgba(255, 255, 255, 0.16)` | Hover state borders |
-| `--color-accent` | `#4A8AE8` | Aerospace blue — links, focus, airfoil |
+| `--color-accent` | `#4A8AE8` | Aerospace blue — links, focus, accents |
 | `--color-accent-hover` | `#6BA0F0` | Hover state for accent |
 | `--color-accent-dim` | `rgba(74, 138, 232, 0.16)` | Backgrounds for accent pills |
 
