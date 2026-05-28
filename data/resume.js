@@ -35,7 +35,7 @@ export const resume = {
       ]
     },
     {
-      role: "Mechanical Design — 3D-Printed Bicycle Brake Caliper",
+      role: "Mechanical Design: 3D-Printed Bicycle Brake Caliper",
       org: "Northwestern McCormick (course project)",
       location: "Evanston, IL",
       timeline: "Spring 2025",
@@ -45,12 +45,12 @@ export const resume = {
       ]
     },
     {
-      role: "Project Lead — Automatic Card Shuffler",
+      role: "Project Lead: Automatic Card Shuffler",
       org: "Self-directed capstone",
       location: "Evanston, IL",
       timeline: "Spring 2024",
       bullets: [
-        "Built an autonomous card shuffler that thoroughly shuffles a deck in two passes — roughly 20% faster than manual shuffling.",
+        "Built an autonomous card shuffler that thoroughly shuffles a deck in two passes, roughly 20% faster than manual shuffling.",
         "Integrated DC motors and microcontroller logic with laser-cut acrylic and CNC-routed wood components."
       ]
     }
@@ -63,14 +63,14 @@ export const resume = {
       timeline: "Jul 2024 – Present",
       bullets: [
         "Built the chapter from scratch: formed a 5-member executive board, defined leadership roles, recruited 30 members through a rigorous selection process.",
-        "Led a consulting engagement with Y Combinator-backed Capitol AI — weekly data collection, user feedback analysis, and actionable recommendations.",
+        "Led a consulting engagement with Y Combinator-backed Capitol AI: weekly data collection, user feedback analysis, and actionable recommendations.",
         "Coordinated with student leaders at peer universities to align on chapter mission and values."
       ]
     },
     {
       role: "VP of Marketing",
       org: "Kappa Theta Pi (KTP), Kappa Chapter",
-      timeline: "[PLACEHOLDER — dates]",
+      timeline: "[PLACEHOLDER: dates]",
       bullets: [
         "Oversaw marketing strategy and initiatives, increasing chapter visibility and engagement 200%."
       ]
@@ -85,11 +85,11 @@ export const resume = {
 
   awards: [
     {
-      label: "SIG Poker — Regional",
+      label: "SIG Poker: Regional",
       value: "2nd of 100 · $1,000 (2024–25 Susquehanna International Group)"
     },
     {
-      label: "SIG Poker — National",
+      label: "SIG Poker: National",
       value: "5th of 8,000 · $1,500"
     },
     {

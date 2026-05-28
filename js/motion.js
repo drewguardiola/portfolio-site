@@ -25,7 +25,7 @@
   targets.forEach((el) => io.observe(el));
 })();
 
-// Background pattern parallax — moves at 0.4x scroll rate.
+// Background pattern parallax: moves at 0.4x scroll rate.
 (function () {
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduce) return;

@@ -37,7 +37,7 @@ Confident, technical, concise. Active verbs, quantified impact, no buzzwords. Re
 
 ## Drew's voice specifically
 
-- Aerospace direction is explicit. Internships, FSAE aero, CFD work — all point the same direction.
+- Aerospace direction is explicit. Internships, FSAE aero, CFD work, all point the same direction.
 - Dual-degree (B.S./M.S.) is a credential, mention once on home + Resume, don't repeat.
 - Honeywell experience is the strongest single signal. Surface it on home stats + Resume.
 - Hobbies on About: human signal, not a personality test. One row, one word each.

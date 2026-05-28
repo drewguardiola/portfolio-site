@@ -165,17 +165,17 @@ function renderProjectDetail() {
       el('p', { class: 'muted' }, `No project with id "${id || '(none)'}". `),
       el('a', { href: 'work.html', class: 'btn' }, 'Back to all work')
     ]));
-    document.title = 'Not found — Drew Guardiola';
+    document.title = 'Not found · Drew Guardiola';
     return;
   }
 
-  document.title = `${p.title} — Drew Guardiola`;
+  document.title = `${p.title} · Drew Guardiola`;
 
   if (p.upcoming) {
     root.appendChild(el('section', { class: 'project-hero container' }, [
       el('div', { class: 'project-hero__eyebrow reveal' }, p.category || 'Project'),
       el('h1', { class: 'project-hero__title reveal' }, p.title),
-      el('p', { class: 'project-hero__summary reveal', style: 'margin-top: var(--space-6); color: var(--color-text-muted);' }, 'This project page is coming soon — check back later.'),
+      el('p', { class: 'project-hero__summary reveal', style: 'margin-top: var(--space-6); color: var(--color-text-muted);' }, 'This project page is coming soon, check back later.'),
       el('a', { href: 'work.html', class: 'btn', style: 'margin-top: var(--space-5); align-self: flex-start;' }, '← Back to all work')
     ]));
     return;
@@ -196,7 +196,7 @@ function renderProjectDetail() {
   ]);
   root.appendChild(cover);
 
-  // Metadata strip — Tools only, engineering only
+  // Metadata strip: Tools only, engineering only
   if (p.category === 'Engineering' && Array.isArray(p.tools) && p.tools.length) {
     const meta = el('div', { class: 'container' }, [
       el('div', { class: 'project-meta reveal' }, [

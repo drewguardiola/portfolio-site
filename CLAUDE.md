@@ -1,6 +1,11 @@
-# Drew Guardiola — Portfolio Site
+# Drew Guardiola · Portfolio Site
 
 Personal portfolio for Drew Guardiola (Northwestern McCormick, MechE B.S./M.S. '27). Targeting mechanical / aerospace internships starting Summer 2026.
+
+## V2.8 changes (May 2026)
+
+- Em dashes purged sitewide. Convention: do not use em dashes in any user-facing copy. Replace asides with commas, amplifications with colons, abrupt breaks with periods. The only exempt instance is the "Northwestern University — McCormick School of Engineering" school-name separator (about.html, resume.js). Page title separator is `·` (middle dot).
+- Home Toolkit expanded from 8 to 16 skills (4×4 grid). Added: CFD, FEA, Topology Opt., Manual Milling, Sand Casting, Injection Molding, Embedded Systems, DOORS. Eight new SVG icons in `assets/brand/icons/` in the existing line-stroke style. Software + process entries remain intentionally mixed within the grid (not split into themed groups).
 
 ## V2.7 changes (May 2026)
 
@@ -63,17 +68,6 @@ Personal portfolio for Drew Guardiola (Northwestern McCormick, MechE B.S./M.S. '
 - Headshot has slow-rotating conic-gradient glow ring
 - Mobile hover-list fallback: stacked rows with cover thumbnails
 
-## V2 changes (May 2026)
-
-- Hero: headshot + name side-by-side, reduced subtitle, removed availability pill, bigger stats
-- Home page: "Featured Work" heading (no subtitle), removed About preview, toolkit with icons
-- New projects: 5 added (3 placeholder, 2 upcoming with "coming soon" stub)
-- Schema: `upcoming: boolean` field for project entries
-- Resume: PDF embed instead of web-rendered (`resume.html`)
-- Contact: standalone page at `contact.html` (nav updated across all pages)
-- Background: topographic contour SVG pattern on body
-- Motion: staggered reveals (`data-reveal-delay`), hero parallax, nav underlines
-
 ## Stack
 
 Plain HTML + CSS + vanilla JS. No build step. No npm. Run locally with `python -m http.server 8000` (or open `index.html` directly).
@@ -84,7 +78,7 @@ Plain HTML + CSS + vanilla JS. No build step. No npm. Run locally with `python -
 2. **Project data lives in `data/projects.js`.** Resume data lives in `data/resume.js`. Never hardcode project or resume content into HTML. Adding/editing a project = editing the data file only and dropping new images into `assets/projects/<slug>/`.
 3. **Screenshot self-check after every visual change.** Puppeteer at 375 / 768 / 1440. Save to `tmp-screenshots/`. Iterate at least twice. Clean the folder at session end.
 4. **Do not push to GitHub without an explicit "deploy" command from Drew.** Local-only by default.
-5. **No lorem ipsum. No fabricated specs.** Missing content gets `[PLACEHOLDER — fill in]` in caps so it's greppable. Never invent numbers, dates, dimensions, or technical claims.
+5. **No lorem ipsum. No fabricated specs.** Missing content gets `[PLACEHOLDER: fill in]` in caps so it's greppable. Never invent numbers, dates, dimensions, or technical claims.
 6. **Dark theme only.** All color / spacing / type / motion tokens live in CSS variables in `:root` (see `docs/design-tokens.md`). No inline colors.
 7. **Accessibility floor.** Alt text on every image, semantic HTML5 landmarks (`<nav>`, `<main>`, `<article>`, `<footer>`), AA contrast minimum, full keyboard navigability with visible focus rings, `prefers-reduced-motion` respected.
 8. **Voice.** Confident, technical, concise. Active verbs, quantified impact, no buzzwords. Read `docs/voice-and-tone.md` before writing copy.
@@ -109,7 +103,7 @@ Plain HTML + CSS + vanilla JS. No build step. No npm. Run locally with `python -
 ## Schema notes
 
 ### Image captions
-Section `images` arrays accept both plain strings and `{ src: string, caption: string }` objects. The renderer normalizes at render time. Use caption objects only when the image needs a label — most images are fine as plain strings.
+Section `images` arrays accept both plain strings and `{ src: string, caption: string }` objects. The renderer normalizes at render time. Use caption objects only when the image needs a label; most images are fine as plain strings.
 
 ### Links format
 `links` is an array of `{ label: string, url: string }` objects. Empty array `[]` if no links. Rendered as a button row below the metadata strip on the detail page.
@@ -142,7 +136,7 @@ Set `upcoming: true` on a project entry. Cards render dimmed with a "Coming Soon
 - A place for emoji decoration, glassmorphism, neon glow, gradient blobs, or bouncing icons
 - A vibe-coded landing page
 
-## Anti-patterns — refuse and ask first
+## Anti-patterns: refuse and ask first
 
 - Adding a JS framework, build step, or package manager
 - Pushing to GitHub

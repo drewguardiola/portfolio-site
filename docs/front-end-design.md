@@ -4,9 +4,9 @@ Manual reference for visual decisions on this site. Consult before any front-end
 
 ## Reference aesthetic
 
-- SpaceX product pages — full-bleed visuals, restrained typography, technical confidence
-- Apple product reveals (iPhone, Mac Pro, Vision Pro pages) — big type, generous whitespace, image-forward sections with clear visual rhythm
-- Linear.app — disciplined dark UI, tight typography, accent used as punctuation not decoration
+- SpaceX product pages: full-bleed visuals, restrained typography, technical confidence
+- Apple product reveals (iPhone, Mac Pro, Vision Pro pages): big type, generous whitespace, image-forward sections with clear visual rhythm
+- Linear.app: disciplined dark UI, tight typography, accent used as punctuation not decoration
 
 **Tuned for an engineering student**, not a SaaS startup. The site should look like a real engineer's portfolio, not a template.
 
@@ -20,7 +20,7 @@ Manual reference for visual decisions on this site. Consult before any front-end
 - Accent: `#4A8AE8` (aerospace blue)
 - Accent hover: `#6BA0F0`
 
-One accent color. Use sparingly — links, focus rings, hover lifts, monospace technical metadata highlights, the "Available for Summer 2026" pill. Never as a fill on large surfaces.
+One accent color. Use sparingly: links, focus rings, hover lifts, monospace technical metadata highlights, the "Available for Summer 2026" pill. Never as a fill on large surfaces.
 
 ## Typography
 
@@ -31,7 +31,7 @@ Display headings: tight letter-spacing (`-0.02em` to `-0.04em`), heavy weight (7
 
 Body: 400 weight, line-height 1.6, max measure ~70ch.
 
-Monospace: for technical metadata only — coordinates, project IDs, tool tags, timelines, dimensions. Sells the engineering identity. Use uppercase letter-spaced labels sparingly.
+Monospace: for technical metadata only (coordinates, project IDs, tool tags, timelines, dimensions). Sells the engineering identity. Use uppercase letter-spaced labels sparingly.
 
 ## Motion
 
@@ -51,7 +51,7 @@ Monospace: for technical metadata only — coordinates, project IDs, tool tags, 
 - Emoji as UI decoration
 - Bouncing or wobbling icons
 - Lorem ipsum
-- Tailwind-default-looking project cards (rounded corners + soft shadow + image-on-top is the cliché — give cards real identity)
+- Tailwind-default-looking project cards (rounded corners + soft shadow + image-on-top is the cliché; give cards real identity)
 - Three.js demos, particle physics, or any animation that screams "AI vibe-coded"
 - Hero text in accent color (white text on dark; accent only on the availability pill or links)
 
@@ -66,7 +66,7 @@ Monospace: for technical metadata only — coordinates, project IDs, tool tags, 
 ## Screenshot self-check checklist
 
 After any visual change, screenshot at 375 / 768 / 1440 and ask:
-1. Does this look template-y? (If yes — cut decoration.)
+1. Does this look template-y? (If yes, cut decoration.)
 2. Is the accent doing too much? (One accent moment per viewport, max two.)
 3. Is the monospace earning its place? (Only on actual technical metadata.)
 4. Is the spacing rhythmic? (No cramped sections, no oceans of empty space.)
