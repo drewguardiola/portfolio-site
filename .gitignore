@@ -1,0 +1,6 @@
+tmp-screenshots/
+node_modules/
+.claude/
+desktop.ini
+Thumbs.db
+*.tmp
