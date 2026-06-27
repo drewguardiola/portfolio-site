@@ -105,7 +105,7 @@ export const projects = [
     title: "Automatic Card Shuffler",
     category: "Engineering",
     featured: true,
-    priority: 6,
+    priority: 7,
     coverImage: "assets/projects/automatic-card-shuffler/automatic-card-shuffler_6.png",
     tags: ["Mechatronics", "Embedded Systems", "Mechanical Design"],
     summary: "Self-directed capstone: designed and built an autonomous, gravity-based card shuffler using a Raspberry Pi Pico, friction wheels, and fabricated wood/acrylic frame.",
@@ -333,12 +333,54 @@ export const projects = [
   },
 
   {
+    id: "computer-vision",
+    title: "Real-Time Computer Vision",
+    category: "Engineering",
+    featured: true,
+    priority: 6,
+    coverImage: "assets/projects/computer-vision/computer-vision_1.png",
+    tags: ["Computer Vision", "Machine Learning", "Python"],
+    summary: "I made three real-time computer vision apps that run on a standard laptop webcam. The first is a two-handed gesture calculator, the second is a hand-sign classifier covering the full ASL alphabet plus custom signs, and the third is a pose matcher that finds the reference photo closest to how I'm standing in real life.",
+    impact: "All three apps run in continuous time on a standard webcam with no GPU, and the sign-language model recognizes 32 distinct hand signs at 95%+ holdout accuracy.",
+    role: "Solo developer, all three apps end to end",
+    timeline: "Spring 2026",
+    tools: ["Python", "MediaPipe", "OpenCV", "scikit-learn", "NumPy"],
+    sections: [
+      {
+        heading: "Two Hands and a Head as a Calculator",
+        body: "A physical calculator with no keyboard: my left hand sets the first operand, my right hand sets the second, and my head and face select the operation. Finger counts read 0 to 5, flipping to the back of the hand adds 5, turning a hand sideways multiplies by 10, and inverting it multiplies by 100, so a single hand can express any whole number up to 1000. Head direction selects the four basic operations, an open mouth switches to logarithm, and closed eyes switch to nth root, which covers seven operations in total. To keep detection stable I estimate head pose from facial landmark ratios, and I gate the thumb on its distance from the palm so that a thumb hidden behind the hand stops registering as extended.",
+        images: [
+          { src: "assets/projects/computer-vision/computer-vision_1.png", caption: "Live readout showing both hand values, the selected operation, and the result" },
+          { src: "assets/projects/computer-vision/computer-vision_4.mp4", caption: "Live demo of the gesture calculator" }
+        ]
+      },
+      {
+        heading: "Classifying 32 Hand Signs with a Calibrated SVM",
+        body: "I built a hand-sign recognizer that identifies the 26 static letters of the ASL alphabet plus 6 custom signs from one hand. For each frame I take the 21 hand landmarks, recenter them on the wrist, and normalize for scale, producing a 63-value feature vector that does not depend on where the hand sits in frame or how large it appears. I collect training data live by holding each sign and capturing short bursts of frames, then train a calibrated support vector machine that returns both a prediction and a confidence score at video frame rate. Once all signs were trained, the model reaches 95%+ accuracy on a held-out test set.",
+        images: [
+          { src: "assets/projects/computer-vision/computer-vision_2.png", caption: "Live classification with predicted sign and confidence" },
+          { src: "assets/projects/computer-vision/computer-vision_5.mp4", caption: "Live demo of the sign classifier" }
+        ]
+      },
+      {
+        heading: "Mirror-Invariant Pose Matching",
+        body: "I built a pose matcher that compares my live body position against a bank of reference photos and surfaces the closest match in real time. I take the 33 body landmarks from MediaPipe Pose and normalize them against the torso so the match does not depend on my distance from the camera or where I stand in the frame, then make the comparison mirror-invariant so the same pose scores equally whether I lead with my left or right side. I weight the arms more heavily in the distance metric because they carry most of the signal in the poses I was matching, and I render the output in a vertical format sized for short-form video.",
+        images: [
+          { src: "assets/projects/computer-vision/computer-vision_3.png", caption: "Live pose beside its closest reference match" },
+          { src: "assets/projects/computer-vision/computer-vision_6.mp4", caption: "Live demo of the pose matcher" }
+        ]
+      }
+    ],
+    links: []
+  },
+
+  {
     id: "tesla-valve-cfd",
     title: "Tesla Valve CFD Analysis",
     category: "Engineering",
     featured: false,
     upcoming: true,
-    priority: 10,
+    priority: 11,
     coverImage: "assets/projects/tesla-valve-cfd/tesla-valve-cfd_1.png",
     tags: ["CFD", "Fluid Dynamics"],
     summary: "[PLACEHOLDER: fill in]",
@@ -356,7 +398,7 @@ export const projects = [
     category: "Engineering",
     featured: false,
     upcoming: true,
-    priority: 11,
+    priority: 12,
     coverImage: "assets/projects/nasa-dragonfly-hover/nasa-dragonfly-hover_1.png",
     tags: ["CFD", "Aerodynamics"],
     summary: "[PLACEHOLDER: fill in]",
@@ -374,7 +416,7 @@ export const projects = [
     category: "Engineering",
     featured: false,
     upcoming: true,
-    priority: 13,
+    priority: 14,
     coverImage: "assets/projects/fea-cloud-city/fea-cloud-city_1.jpg",
     tags: ["FEA", "Simulation"],
     summary: "[PLACEHOLDER: fill in]",
@@ -392,7 +434,7 @@ export const projects = [
     category: "Engineering",
     featured: false,
     upcoming: true,
-    priority: 14,
+    priority: 15,
     coverImage: "assets/projects/radial-vibration-bicycle-rim/radial-vibration-bicycle-rim_1.png",
     tags: ["Vibration", "Dynamics"],
     summary: "[PLACEHOLDER: fill in]",
@@ -409,7 +451,7 @@ export const projects = [
     title: "DuoMark Stylus",
     category: "Engineering",
     featured: false,
-    priority: 7,
+    priority: 8,
     coverImage: "assets/projects/duomark-stylus/duomark-stylus_2.png",
     tags: ["Product Design", "Assistive Tech", "Client Work"],
     summary: "Designed an assistive stylus-marker hybrid for an occupational therapist’s clients, enabling seamless transitions between digital and paper writing.",
@@ -457,7 +499,7 @@ export const projects = [
     title: "Dice in a Cup Simulation",
     category: "Engineering",
     featured: false,
-    priority: 8,
+    priority: 9,
     coverImage: "assets/projects/dice-in-cup/dice-in-cup_3.png",
     tags: ["Simulation", "Python", "Dynamics"],
     summary: "Simulated a dice bouncing inside a moving cup using symbolic math, Euler-Lagrange mechanics, and impact modeling in Python.",
@@ -504,7 +546,7 @@ export const projects = [
     title: "LegLatch",
     category: "Engineering",
     featured: false,
-    priority: 9,
+    priority: 10,
     coverImage: "assets/projects/leglatch/leglatch_5.png",
     tags: ["Design Thinking", "Client Work", "Non-Profit"],
     summary: "Designed wearable pants with attachable legs to prevent toddlers from climbing out of high chairs, in partnership with non-profit Kids In Danger (KID).",
@@ -546,7 +588,7 @@ export const projects = [
     category: "Engineering",
     featured: false,
     upcoming: true,
-    priority: 12,
+    priority: 13,
     coverImage: "assets/projects/mechatronics/mechatronics_1.png",
     tags: ["Mechatronics", "Embedded"],
     summary: "[PLACEHOLDER: fill in. One-sentence summary covering the mechatronics coursework / projects to feature here.]",
@@ -565,7 +607,7 @@ export const projects = [
     title: "Ascend Consulting",
     category: "Non-Engineering",
     featured: false,
-    priority: 16,
+    priority: 17,
     coverImage: "assets/projects/ascend-consulting/ascend-consulting_6.jpg",
     tags: ["Leadership", "Y Combinator"],
     summary: "Founding President of the Northwestern Chapter of Ascend Consulting Group, a student-led organization pairing students with YC-backed startups.",
@@ -609,7 +651,7 @@ export const projects = [
     title: "Poker",
     category: "Non-Engineering",
     featured: false,
-    priority: 15,
+    priority: 16,
     coverImage: "assets/projects/poker/poker_1.jpg",
     tags: ["Texas Hold 'Em", "Tournaments"],
     summary: "Self-taught Texas Hold 'Em player who turned a curiosity at a friend's cottage into multiple top finishes in national-scale tournaments.",
@@ -655,7 +697,7 @@ export const projects = [
     title: "Saxophone",
     category: "Non-Engineering",
     featured: false,
-    priority: 18,
+    priority: 19,
     coverImage: "assets/projects/saxophone/saxophone_1.jpg",
     tags: ["Tenor Sax", "Marching Band"],
     summary: "Tenor saxophone player for 8 years (after 3 years on alto). Group 1 Open Champions at MetLife Stadium, 2021.",
@@ -688,7 +730,7 @@ export const projects = [
     title: "Snowboarding",
     category: "Non-Engineering",
     featured: false,
-    priority: 17,
+    priority: 18,
     coverImage: "assets/projects/snowboarding/snowboarding_6.jpg",
     tags: ["Aspen", "Powder"],
     summary: "Snowboarder since age 11, conquering first black diamonds and first jumps in Aspen during December 2024.",
